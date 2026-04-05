@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matlancer Marketing — Scale Your Business With Precision</title>
+  <meta name="description" content="Results-driven digital marketing agency. We help businesses grow through data-backed strategies, SEO, PPC, social media, and conversion optimization."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 50:'#e8ecf5',100:'#c5cfe6',200:'#9fb0d4',300:'#7891c2',400:'#5a7ab5',500:'#3c63a8',600:'#2a4d8e',700:'#1e3a70',800:'#142852',900:'#0d1b4b',950:'#080f2e' },
+            gold: { 300:'#f0d070',400:'#e8c040',500:'#c9a84c',600:'#a8893a',700:'#856c2c' }
+          },
+          fontFamily: {
+            display: ['"Playfair Display"','Georgia','serif'],
+            body: ['"DM Sans"','sans-serif'],
+            mono: ['"JetBrains Mono"','monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;overflow-x:hidden;}
+    body{font-family:'DM Sans',sans-serif;background-color:#080f2e;color:#e8ecf5;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    ::selection{background:#c9a84c;color:#0d1b4b;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#080f2e;}
+    ::-webkit-scrollbar-thumb{background:#c9a84c;}
+    .hero-bg{background:radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.06) 0%, transparent 50%),radial-gradient(ellipse at 80% 20%, rgba(30,58,112,0.8) 0%, transparent 50%),linear-gradient(135deg,#080f2e 0%,#0d1b4b 50%,#142852 100%);}
+    .grid-pattern{background-image:linear-gradient(rgba(201,168,76,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.03) 1px,transparent 1px);background-size:60px 60px;}
+    .gradient-text{background:linear-gradient(90deg,#f0d070,#c9a84c,#f0d070);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#c9a84c;color:#080f2e;font-weight:600;font-family:'DM Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-size:13px;text-decoration:none;transition:all 0.3s;border:none;cursor:pointer;}
+    .btn-primary:hover{background:#e8c040;box-shadow:0 0 30px rgba(201,168,76,0.4);transform:translateY(-2px);}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border:1px solid #c9a84c;color:#c9a84c;font-weight:600;font-family:'DM Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-size:13px;text-decoration:none;transition:all 0.3s;}
+    .btn-outline:hover{background:#c9a84c;color:#080f2e;transform:translateY(-2px);}
+    .card-glass{background:rgba(20,40,82,0.4);backdrop-filter:blur(12px);border:1px solid rgba(30,58,112,0.5);transition:all 0.5s;}
+    .card-glass:hover{border-color:rgba(201,168,76,0.3);}
+    .section-tag{display:inline-flex;align-items:center;gap:8px;color:#c9a84c;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:16px;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+    @keyframes floatDelay{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes barGrow{from{height:0}to{height:var(--bar-h)}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+    .float-1{animation:float 7s ease-in-out infinite;}
+    .float-2{animation:floatDelay 9s ease-in-out 1.5s infinite;}
+    .float-3{animation:floatDelay 6s ease-in-out 3s infinite;}
+    .shimmer-bg{background:linear-gradient(90deg,#c9a84c 0%,#f0d070 50%,#c9a84c 100%);background-size:200% 100%;animation:shimmer 3s linear infinite;}
+    .fade-up{animation:fadeUp 0.8s ease-out forwards;}
+    .fade-up-1{animation:fadeUp 0.8s ease-out 0.1s forwards;opacity:0;}
+    .fade-up-2{animation:fadeUp 0.8s ease-out 0.25s forwards;opacity:0;}
+    .fade-up-3{animation:fadeUp 0.8s ease-out 0.4s forwards;opacity:0;}
+    .fade-up-4{animation:fadeUp 0.8s ease-out 0.55s forwards;opacity:0;}
+    .fade-up-5{animation:fadeUp 0.8s ease-out 0.7s forwards;opacity:0;}
+    .bar{transition:height 1s ease-out;width:100%;}
+    .nav-scrolled{background:rgba(8,15,46,0.97)!important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,58,112,0.6);padding-top:12px!important;padding-bottom:12px!important;}
+    .tab-active{background:#c9a84c;color:#080f2e;}
+    .tab-inactive{color:#7891c2;}
+    .tab-inactive:hover{color:#fff;}
+    .star{color:#c9a84c;}
+    .testimonial-dot{width:8px;height:8px;background:#142852;cursor:pointer;transition:all 0.3s;}
+    .testimonial-dot.active{width:28px;background:#c9a84c;}
+    input,select,textarea{font-family:'DM Sans',sans-serif;}
+    .input-field{width:100%;background:rgba(13,27,75,0.8);border:1px solid rgba(30,58,112,0.6);color:#e8ecf5;padding:12px 16px;font-size:14px;outline:none;transition:border-color 0.2s;font-family:'DM Sans',sans-serif;}
+    .input-field:focus{border-color:rgba(201,168,76,0.5);}
+    .input-field::placeholder{color:#3c63a8;}
+    .pulse-dot{width:8px;height:8px;background:#22c55e;border-radius:50%;animation:pulse 2s ease-in-out infinite;}
+  </style>
+</head>
+<body class="bg-navy-950">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5" style="background:transparent;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <svg width="46" height="46" viewBox="170 95 350 310" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="lng" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0d1b4b"/></linearGradient>
+          <linearGradient id="lgh" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c9a84c"/><stop offset="50%" stop-color="#f0d070"/><stop offset="100%" stop-color="#c9a84c"/></linearGradient>
+          <linearGradient id="lb1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c040"/><stop offset="100%" stop-color="#a8893a"/></linearGradient>
+          <linearGradient id="lb2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0d070"/><stop offset="100%" stop-color="#c9a84c"/></linearGradient>
+          <filter id="lss"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0d1b4b" flood-opacity="0.2"/></filter>
+          <filter id="lgg"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#c9a84c" flood-opacity="0.4"/></filter>
+        </defs>
+        <circle cx="340" cy="230" r="195" fill="none" stroke="#1e3a8a" stroke-width="0.8" opacity="0.3"/>
+        <circle cx="340" cy="230" r="188" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+        <path d="M 182 390 L 182 105 L 200 105 L 200 390 Z" fill="url(#lng)" filter="url(#lss)"/>
+        <path d="M 170 105 L 212 105 L 212 118 L 170 118 Z" fill="url(#lng)"/>
+        <path d="M 170 378 L 212 378 L 212 390 L 170 390 Z" fill="url(#lng)"/>
+        <path d="M 480 390 L 480 105 L 498 105 L 498 390 Z" fill="url(#lng)" filter="url(#lss)"/>
+        <path d="M 468 105 L 510 105 L 510 118 L 468 118 Z" fill="url(#lng)"/>
+        <path d="M 468 378 L 510 378 L 510 390 L 468 390 Z" fill="url(#lng)"/>
+        <path d="M 182 105 L 200 105 L 340 272 L 480 105 L 498 105 L 340 300 Z" fill="url(#lng)"/>
+        <path d="M 332 285 L 340 300 L 348 285 L 344 285 L 340 293 L 336 285 Z" fill="#c9a84c" opacity="0.6"/>
+        <rect x="195" y="318" width="22" height="60" rx="1" fill="url(#lb1)" filter="url(#lgg)"/>
+        <rect x="232" y="295" width="22" height="83" rx="1" fill="url(#lb2)" filter="url(#lgg)"/>
+        <rect x="270" y="270" width="22" height="108" rx="1" fill="url(#lb2)" filter="url(#lgg)"/>
+        <rect x="388" y="270" width="22" height="108" rx="1" fill="url(#lb2)" filter="url(#lgg)"/>
+        <rect x="426" y="295" width="22" height="83" rx="1" fill="url(#lb2)" filter="url(#lgg)"/>
+        <rect x="463" y="318" width="22" height="60" rx="1" fill="url(#lb1)" filter="url(#lgg)"/>
+        <g filter="url(#lgg)">
+          <path d="M 192 360 L 260 300 L 310 330 L 400 240 L 470 190" fill="none" stroke="url(#lgh)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 456 178 L 484 185 L 474 212" fill="none" stroke="#f0d070" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="470" cy="190" r="3.5" fill="#f0d070"/>
+        </g>
+        <line x1="178" y1="379" x2="503" y2="379" stroke="#c9a84c" stroke-width="1.5" opacity="0.4"/>
+      </svg>
+      <div style="line-height:1.1;">
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#ffffff;letter-spacing:0.12em;">MATLANCER</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.32em;text-transform:uppercase;color:#c9a84c;margin-top:2px;">Marketing</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#features" class="text-navy-200 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Services</a>
+      <a href="#process" class="text-navy-200 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Process</a>
+      <a href="#pricing" class="text-navy-200 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Pricing</a>
+      <a href="#testimonials" class="text-navy-200 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Testimonials</a>
+      <a href="#contact" class="text-navy-200 hover:text-gold-400 transition-colors text-sm font-medium tracking-wide">Contact</a>
+    </nav>
+    <a href="#contact" class="btn-primary py-3 px-6 text-xs hidden md:inline-flex">
+      Get Free Audit
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center overflow-hidden hero-bg">
+  <div class="absolute inset-0 grid-pattern opacity-60"></div>
+  <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full float-1 pointer-events-none" style="background:radial-gradient(circle,rgba(201,168,76,0.06),transparent 70%);filter:blur(40px);"></div>
+  <div class="absolute bottom-1/4 left-1/6 w-64 h-64 rounded-full float-2 pointer-events-none" style="background:radial-gradient(circle,rgba(30,58,112,0.2),transparent 70%);filter:blur(30px);"></div>
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-0 right-0 h-full" style="right:30%;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,168,76,0.15),transparent);"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 w-full">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left -->
+      <div>
+        <div class="section-tag fade-up-1">
+          <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span>
+          Precision Digital Marketing
+        </div>
+        <h1 class="font-display font-bold leading-tight mb-6 fade-up-2" style="font-size:clamp(2.8rem,6vw,4.5rem);">
+          <span class="text-white">Scale Your</span><br>
+          <span class="gradient-text">Business</span><br>
+          <span class="text-white">With Precision.</span>
+        </h1>
+        <p class="text-navy-200 text-lg leading-relaxed mb-10 max-w-xl font-light fade-up-3">
+          Matlancer Marketing delivers data-backed campaigns that convert. From SEO to paid media, we engineer growth strategies that don't just generate traffic — they generate revenue.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-14 fade-up-4">
+          <a href="#contact" class="btn-primary shimmer-bg" style="color:#080f2e;">
+            Get Free Strategy Audit
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#features" class="btn-outline">Explore Services</a>
+        </div>
+        <div class="flex items-center gap-4 text-navy-300 text-sm fade-up-5">
+          <div style="display:flex;margin-left:-8px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:#1e3a70;border:2px solid #080f2e;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c9a84c;">J</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#1e3a70;border:2px solid #080f2e;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c9a84c;margin-left:-8px;">A</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#1e3a70;border:2px solid #080f2e;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c9a84c;margin-left:-8px;">M</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#1e3a70;border:2px solid #080f2e;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c9a84c;margin-left:-8px;">S</div>
+            <div style="width:32px;height:32px;border-radius:50%;background:#1e3a70;border:2px solid #080f2e;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c9a84c;margin-left:-8px;">K</div>
+          </div>
+          <span>Trusted by <strong class="text-white">500+ businesses</strong> worldwide</span>
+        </div>
+      </div>
+      <!-- Right: Dashboard Widget -->
+      <div class="hidden lg:block relative">
+        <div class="card-glass p-6 ml-8 float-1" style="position:relative;">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <div class="text-navy-300 font-mono tracking-wider mb-1" style="font-size:10px;">CAMPAIGN PERFORMANCE</div>
+              <div class="font-display font-bold text-white" style="font-size:1.6rem;">+247% ROI</div>
+            </div>
+            <div style="background:rgba(34,197,94,0.15);color:#4ade80;font-size:11px;font-family:'JetBrains Mono',monospace;padding:4px 12px;border:1px solid rgba(34,197,94,0.3);">↑ LIVE</div>
+          </div>
+          <!-- Bar chart -->
+          <div style="display:flex;align-items:flex-end;gap:5px;height:88px;margin-bottom:16px;" id="barChart">
+            <div class="bar" style="--bar-h:38%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:38%;"></div>
+            <div class="bar" style="--bar-h:52%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:52%;"></div>
+            <div class="bar" style="--bar-h:33%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:33%;"></div>
+            <div class="bar" style="--bar-h:68%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:68%;"></div>
+            <div class="bar" style="--bar-h:58%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:58%;"></div>
+            <div class="bar" style="--bar-h:83%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:83%;"></div>
+            <div class="bar" style="--bar-h:73%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:73%;"></div>
+            <div class="bar" style="--bar-h:93%;flex:1;background:linear-gradient(to top,#a8893a,#e8c040);height:93%;"></div>
+            <div class="bar" style="--bar-h:78%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:78%;"></div>
+            <div class="bar" style="--bar-h:100%;flex:1;background:linear-gradient(to top,#a8893a,#f0d070);height:100%;"></div>
+            <div class="bar" style="--bar-h:87%;flex:1;background:linear-gradient(to top,#a8893a,#c9a84c);height:87%;"></div>
+            <div class="bar" style="--bar-h:110%;flex:1;background:linear-gradient(to top,#856c2c,#f0d070);height:100%;"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:14px;border-top:1px solid rgba(30,58,112,0.5);">
+            <div><div class="text-navy-400 font-mono" style="font-size:10px;margin-bottom:3px;">CONVERSIONS</div><div class="text-white font-bold text-sm">2,847</div><div style="color:#4ade80;font-size:10px;font-family:'JetBrains Mono',monospace;">+34%</div></div>
+            <div><div class="text-navy-400 font-mono" style="font-size:10px;margin-bottom:3px;">REVENUE</div><div class="text-white font-bold text-sm">$48.2K</div><div style="color:#4ade80;font-size:10px;font-family:'JetBrains Mono',monospace;">+89%</div></div>
+            <div><div class="text-navy-400 font-mono" style="font-size:10px;margin-bottom:3px;">ROAS</div><div class="text-white font-bold text-sm">8.4x</div><div style="color:#4ade80;font-size:10px;font-family:'JetBrains Mono',monospace;">+12%</div></div>
+          </div>
+        </div>
+        <!-- Floating badges -->
+        <div class="card-glass float-3" style="position:absolute;top:-20px;right:-12px;padding:12px 18px;border-color:rgba(201,168,76,0.4);">
+          <div class="text-navy-300 font-mono" style="font-size:10px;margin-bottom:3px;">ORGANIC TRAFFIC</div>
+          <div class="gradient-text font-display font-bold" style="font-size:1.3rem;">+1,340%</div>
+        </div>
+        <div class="card-glass float-2" style="position:absolute;bottom:-24px;left:0;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+          <div style="width:36px;height:36px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#c9a84c"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <div>
+            <div class="text-white font-semibold text-sm">New Lead Captured</div>
+            <div class="text-navy-400" style="font-size:11px;">Enterprise client • 2s ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="mt-28 grid grid-cols-2 md:grid-cols-4" style="gap:1px;background:rgba(30,58,112,0.2);">
+      <div style="background:rgba(8,15,46,0.6);backdrop-filter:blur(8px);padding:24px 32px;text-align:center;">
+        <div class="gradient-text font-display font-bold" style="font-size:2.2rem;margin-bottom:4px;">500+</div>
+        <div class="text-navy-300 font-mono tracking-wider" style="font-size:12px;">Clients Scaled</div>
+      </div>
+      <div style="background:rgba(8,15,46,0.6);backdrop-filter:blur(8px);padding:24px 32px;text-align:center;">
+        <div class="gradient-text font-display font-bold" style="font-size:2.2rem;margin-bottom:4px;">12x</div>
+        <div class="text-navy-300 font-mono tracking-wider" style="font-size:12px;">Avg. ROI</div>
+      </div>
+      <div style="background:rgba(8,15,46,0.6);backdrop-filter:blur(8px);padding:24px 32px;text-align:center;">
+        <div class="gradient-text font-display font-bold" style="font-size:2.2rem;margin-bottom:4px;">$180M+</div>
+        <div class="text-navy-300 font-mono tracking-wider" style="font-size:12px;">Revenue Generated</div>
+      </div>
+      <div style="background:rgba(8,15,46,0.6);backdrop-filter:blur(8px);padding:24px 32px;text-align:center;">
+        <div class="gradient-text font-display font-bold" style="font-size:2.2rem;margin-bottom:4px;">98%</div>
+        <div class="text-navy-300 font-mono tracking-wider" style="font-size:12px;">Client Retention</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,#080f2e,transparent);pointer-events:none;"></div>
+</section>
+
+<!-- TRUST BAR -->
+<div style="background:rgba(13,27,75,0.4);border-top:1px solid rgba(30,58,112,0.3);border-bottom:1px solid rgba(30,58,112,0.3);padding:20px 0;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap justify-center lg:justify-between items-center gap-6">
+      <div class="flex items-center gap-3"><span style="font-size:1.3rem;">🏆</span><div><div class="text-white font-semibold" style="font-size:12px;">Agency of the Year 2024</div><div class="text-navy-500 font-mono" style="font-size:10px;">Digital Marketing Awards</div></div></div>
+      <div class="flex items-center gap-3"><span style="font-size:1.3rem;">⭐</span><div><div class="text-white font-semibold" style="font-size:12px;">4.9/5 Average Rating</div><div class="text-navy-500 font-mono" style="font-size:10px;">Based on 340+ Reviews</div></div></div>
+      <div class="flex items-center gap-3"><span style="font-size:1.3rem;">🌍</span><div><div class="text-white font-semibold" style="font-size:12px;">Google Premier Partner</div><div class="text-navy-500 font-mono" style="font-size:10px;">Top 3% of Agencies</div></div></div>
+      <div class="flex items-center gap-3"><span style="font-size:1.3rem;">📋</span><div><div class="text-white font-semibold" style="font-size:12px;">Meta Business Partner</div><div class="text-navy-500 font-mono" style="font-size:10px;">Official Certified Partner</div></div></div>
+      <div class="flex items-center gap-3"><span style="font-size:1.3rem;">🔒</span><div><div class="text-white font-semibold" style="font-size:12px;">ISO 27001 Certified</div><div class="text-navy-500 font-mono" style="font-size:10px;">Data Security Standard</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="features" style="background:#080f2e;padding:100px 0;position:relative;overflow:hidden;">
+  <div class="absolute inset-0 grid-pattern" style="opacity:0.3;"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-20">
+      <div class="section-tag" style="justify-content:center;">
+        <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span> Our Services <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span>
+      </div>
+      <h2 class="font-display font-bold text-white" style="font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;">Every Channel.<br><span class="gradient-text">Maximum Impact.</span></h2>
+      <p class="text-navy-200 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">We don't offer cookie-cutter campaigns. Every strategy is built from scratch around your specific goals, market, and competitive landscape.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:rgba(30,58,112,0.15);">
+      <div class="service-card group" style="padding:32px;background:#080f2e;border:1px solid transparent;transition:all 0.5s;cursor:default;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)';this.style.background='rgba(13,27,75,0.4)'" onmouseout="this.style.borderColor='transparent';this.style.background='#080f2e'">
+        <div style="font-size:2.2rem;margin-bottom:16px;">📈</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.2rem;">SEO Domination</h3>
+        <p class="text-navy-300 text-sm leading-relaxed mb-6">Own page one. Our technical SEO, content strategy, and link acquisition approach positions your brand at the top of every relevant search.</p>
+        <div style="padding-top:14px;border-top:1px solid rgba(30,58,112,0.4);"><span class="text-gold-500 font-mono" style="font-size:11px;">+340% organic traffic</span></div>
+      </div>
+      <div class="service-card" style="padding:32px;background:#080f2e;border:1px solid transparent;transition:all 0.5s;cursor:default;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)';this.style.background='rgba(13,27,75,0.4)'" onmouseout="this.style.borderColor='transparent';this.style.background='#080f2e'">
+        <div style="font-size:2.2rem;margin-bottom:16px;">🎯</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.2rem;">Paid Media & PPC</h3>
+        <p class="text-navy-300 text-sm leading-relaxed mb-6">Stop burning budget. We engineer laser-targeted Google, Meta, and LinkedIn campaigns with a relentless focus on ROAS and cost-per-acquisition.</p>
+        <div style="padding-top:14px;border-top:1px solid rgba(30,58,112,0.4);"><span class="text-gold-500 font-mono" style="font-size:11px;">8.4x average ROAS</span></div>
+      </div>
+      <div class="service-card" style="padding:32px;background:#080f2e;border:1px solid transparent;transition:all 0.5s;cursor:default;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)';this.style.background='rgba(13,27,75,0.4)'" onmouseout="this.style.borderColor='transparent';this.style.background='#080f2e'">
+        <div style="font-size:2.2rem;margin-bottom:16px;">📱</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.2rem;">Social Media Growth</h3>
+        <p class="text-navy-300 text-sm leading-relaxed mb-6">Build a brand that resonates. We create scroll-stopping content strategies that turn followers into customers and customers into advocates.</p>
+        <div style="padding-top:14px;border-top:1px solid rgba(30,58,112,0.4);"><span class="text-gold-500 font-mono" style="font-size:11px;">+500% engagement</span></div>
+      </div>
+      <div class="service-card" style="padding:32px;background:#080f2e;border:1px solid transparent;transition:all 0.5s;cursor:default;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)';this.style.background='rgba(13,27,75,0.4)'" onmouseout="this.style.borderColor='transparent';this.style.background='#080f2e'">
+        <div style="font-size:2.2rem;margin-bottom:16px;">✍️</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.2rem;">Content Marketing</h3>
+        <p class="text-navy-300 text-sm leading-relaxed mb-6">Authority-driven content that educates, converts, and compounds. Every piece engineered for both search engines and human psychology.</p>
+        <div style="padding-top:14px;border-top:1px solid rgba(30,58,112,0.4);"><span class="text-gold-500 font-mono" style="font-size:11px;">3x conversion rate</span></div>
+      </div>
+      <div class="service-card" style="padding:32px;background:#080f2e;border:1px solid transparent;transition:all 0.5s;cursor:default;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)';this.style.background='rgba(13,27,75,0.4)'" onmouseout="this.style.borderColor='transparent';this.style.background='#080f2e'">
+        <div style="font-size:2.2rem;margin-bottom:16px;">🔄</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.2rem;">Conversion Optimization</h3>
+        <p class="text-navy-300 text-sm leading-relaxed mb-6">Traffic means nothing without conversions. We audit and redesign your funnel to extract maximum revenue from your existing visitors.</p>
+        <div style="padding-top:14px;border-top:1px solid rgba(30,58,112,0.4);"><span class="text-gold-500 font-mono" style="font-size:11px;">+89% conversion rate</span></div>
+      </div>
+      <div class="service-card" style="padding:32px;background:#080f2e;border:1px solid transparent;transition:all 0.5s;cursor:default;" onmouseover="this.style.borderColor='rgba(201,168,76,0.25)';this.style.background='rgba(13,27,75,0.4)'" onmouseout="this.style.borderColor='transparent';this.style.background='#080f2e'">
+        <div style="font-size:2.2rem;margin-bottom:16px;">📊</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.2rem;">Analytics & Reporting</h3>
+        <p class="text-navy-300 text-sm leading-relaxed mb-6">Real-time dashboards and monthly reports that tell the whole story. No vanity metrics — only the KPIs that move your bottom line.</p>
+        <div style="padding-top:14px;border-top:1px solid rgba(30,58,112,0.4);"><span class="text-gold-500 font-mono" style="font-size:11px;">100% transparency</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="background:#0d1b4b;padding:100px 0;position:relative;overflow:hidden;">
+  <div class="absolute inset-0 grid-pattern" style="opacity:0.25;"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-20">
+      <div class="section-tag" style="justify-content:center;">
+        <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span> How It Works <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span>
+      </div>
+      <h2 class="font-display font-bold text-white" style="font-size:clamp(2rem,5vw,3.5rem);">From Audit to <span class="gradient-text">Revenue.</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:rgba(30,58,112,0.15);">
+      <div style="padding:32px;background:#0d1b4b;border:1px solid rgba(30,58,112,0.3);transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.2)';this.style.background='rgba(8,15,46,0.7)'" onmouseout="this.style.borderColor='rgba(30,58,112,0.3)';this.style.background='#0d1b4b'">
+        <div style="width:56px;height:56px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><span class="text-gold-500 font-mono font-bold text-sm">01</span></div>
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">Week 1</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.1rem;">Discovery & Audit</h3>
+        <p class="text-navy-400 text-sm leading-relaxed">We deep-dive into your business, competitors, and current marketing to uncover every gap and opportunity.</p>
+      </div>
+      <div style="padding:32px;background:#0d1b4b;border:1px solid rgba(30,58,112,0.3);transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.2)';this.style.background='rgba(8,15,46,0.7)'" onmouseout="this.style.borderColor='rgba(30,58,112,0.3)';this.style.background='#0d1b4b'">
+        <div style="width:56px;height:56px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><span class="text-gold-500 font-mono font-bold text-sm">02</span></div>
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">Week 1–2</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.1rem;">Strategy Architecture</h3>
+        <p class="text-navy-400 text-sm leading-relaxed">A fully custom growth strategy built around your specific goals, market dynamics, and budget.</p>
+      </div>
+      <div style="padding:32px;background:#0d1b4b;border:1px solid rgba(30,58,112,0.3);transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.2)';this.style.background='rgba(8,15,46,0.7)'" onmouseout="this.style.borderColor='rgba(30,58,112,0.3)';this.style.background='#0d1b4b'">
+        <div style="width:56px;height:56px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><span class="text-gold-500 font-mono font-bold text-sm">03</span></div>
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">Week 2–3</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.1rem;">Launch & Execute</h3>
+        <p class="text-navy-400 text-sm leading-relaxed">Campaigns go live across all agreed channels, with precision targeting and creative that converts.</p>
+      </div>
+      <div style="padding:32px;background:#0d1b4b;border:1px solid rgba(30,58,112,0.3);transition:all 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.2)';this.style.background='rgba(8,15,46,0.7)'" onmouseout="this.style.borderColor='rgba(30,58,112,0.3)';this.style.background='#0d1b4b'">
+        <div style="width:56px;height:56px;border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><span class="text-gold-500 font-mono font-bold text-sm">04</span></div>
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:6px;">Ongoing</div>
+        <h3 class="font-display font-bold text-white mb-3" style="font-size:1.1rem;">Optimise & Scale</h3>
+        <p class="text-navy-400 text-sm leading-relaxed">Continuous A/B testing, data analysis, and budget reallocation to compound returns month over month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" style="background:#080f2e;padding:100px 0;position:relative;overflow:hidden;">
+  <div class="absolute inset-0 grid-pattern" style="opacity:0.2;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <div class="section-tag" style="justify-content:center;">
+        <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span> Transparent Pricing <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span>
+      </div>
+      <h2 class="font-display font-bold text-white" style="font-size:clamp(2rem,5vw,3.5rem);">Invest in Growth,<br><span class="gradient-text">Not Overhead.</span></h2>
+      <p class="text-navy-300 text-lg mt-4 max-w-lg mx-auto mb-8">No hidden fees. No long-term lock-in. Just results that pay for themselves.</p>
+      <div style="display:inline-flex;align-items:center;gap:0;background:rgba(8,15,46,0.6);border:1px solid rgba(30,58,112,0.4);padding:6px;">
+        <button id="monthlyBtn" onclick="setPricing('monthly')" style="padding:8px 24px;font-size:13px;font-weight:600;transition:all 0.2s;background:#c9a84c;color:#080f2e;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;">Monthly</button>
+        <button id="annualBtn" onclick="setPricing('annual')" style="padding:8px 24px;font-size:13px;font-weight:600;transition:all 0.2s;color:#7891c2;border:none;cursor:pointer;background:transparent;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:6px;">Annual <span style="background:rgba(34,197,94,0.15);color:#4ade80;font-size:10px;padding:2px 8px;border:1px solid rgba(34,197,94,0.3);font-family:'JetBrains Mono',monospace;">Save 20%</span></button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(30,58,112,0.2);">
+      <!-- Growth -->
+      <div style="padding:36px;background:#080f2e;display:flex;flex-direction:column;">
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Perfect for emerging brands</div>
+        <h3 class="font-display font-bold text-white mb-4" style="font-size:1.5rem;">Growth</h3>
+        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:32px;">
+          <span class="text-navy-400" style="font-size:1.1rem;">$</span>
+          <span id="growthPrice" class="font-display font-bold text-white" style="font-size:3rem;">1,497</span>
+          <span class="text-navy-400 text-sm">/mo</span>
+        </div>
+        <ul style="list-style:none;space-y:12px;margin-bottom:40px;flex:1;">
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SEO Audit & Strategy</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>On-Page Optimisation</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>8 Content Pieces/Month</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Google Ads Management (up to $5K spend)</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Monthly Performance Report</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dedicated Account Manager</li>
+        </ul>
+        <a href="#contact" class="btn-outline" style="justify-content:center;text-align:center;">Start Growing</a>
+      </div>
+      <!-- Scale (highlighted) -->
+      <div style="padding:36px;background:linear-gradient(to bottom,#142852,#0d1b4b);border-left:1px solid rgba(201,168,76,0.4);border-right:1px solid rgba(201,168,76,0.4);position:relative;display:flex;flex-direction:column;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);"></div>
+        <div style="position:absolute;top:20px;right:20px;background:#c9a84c;color:#080f2e;font-size:10px;font-family:'JetBrains Mono',monospace;font-weight:700;padding:3px 12px;letter-spacing:0.1em;">Most Popular</div>
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">For serious growth ambitions</div>
+        <h3 class="font-display font-bold text-white mb-4" style="font-size:1.5rem;">Scale</h3>
+        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:32px;">
+          <span class="text-navy-400" style="font-size:1.1rem;">$</span>
+          <span id="scalePrice" class="font-display font-bold text-white" style="font-size:3rem;">3,497</span>
+          <span class="text-navy-400 text-sm">/mo</span>
+        </div>
+        <ul style="list-style:none;margin-bottom:40px;flex:1;">
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Growth</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Advanced Technical SEO</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>20 Content Pieces/Month</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Multi-Platform Paid Media (up to $20K)</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Conversion Rate Optimisation</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Social Media Management (3 platforms)</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Bi-weekly Strategy Calls</li>
+        </ul>
+        <a href="#contact" class="btn-primary shimmer-bg" style="justify-content:center;text-align:center;color:#080f2e;">Scale My Business</a>
+      </div>
+      <!-- Dominate -->
+      <div style="padding:36px;background:#080f2e;display:flex;flex-direction:column;">
+        <div class="text-gold-500 font-mono" style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Total market dominance</div>
+        <h3 class="font-display font-bold text-white mb-4" style="font-size:1.5rem;">Dominate</h3>
+        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:32px;">
+          <span class="text-navy-400" style="font-size:1.1rem;">$</span>
+          <span id="dominatePrice" class="font-display font-bold text-white" style="font-size:3rem;">7,997</span>
+          <span class="text-navy-400 text-sm">/mo</span>
+        </div>
+        <ul style="list-style:none;margin-bottom:40px;flex:1;">
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Scale</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited Content Production</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited Paid Media Spend Management</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Full Funnel CRO Program</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>PR & Digital Authority Building</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dedicated Strategy Team (3 specialists)</li>
+          <li style="display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:13px;color:#9fb0d4;"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#c9a84c" style="flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>SLA-backed Performance Guarantees</li>
+        </ul>
+        <a href="#contact" class="btn-outline" style="justify-content:center;text-align:center;">Dominate My Market</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;color:#3c63a8;font-size:13px;">
+      All plans include a <strong style="color:#e8ecf5;">30-day performance guarantee</strong> or your money back. No contracts. Cancel anytime.
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background:#0d1b4b;padding:100px 0;position:relative;overflow:hidden;">
+  <div class="absolute inset-0 grid-pattern" style="opacity:0.2;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.3),transparent);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="section-tag" style="justify-content:center;">
+        <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span> Client Stories <span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span>
+      </div>
+      <h2 class="font-display font-bold text-white" style="font-size:clamp(2rem,5vw,3.5rem);">Results That <span class="gradient-text">Speak Loudly.</span></h2>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="card-glass" style="padding:48px;text-align:center;position:relative;">
+        <div class="font-display font-bold" style="position:absolute;top:20px;left:36px;font-size:5rem;color:rgba(201,168,76,0.08);line-height:1;">"</div>
+        <div style="display:flex;justify-content:center;gap:4px;margin-bottom:20px;">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <blockquote id="testimonialText" class="font-display font-medium text-white leading-relaxed" style="font-size:1.2rem;margin-bottom:28px;">"Matlancer completely transformed our digital presence. Within 6 months, our organic traffic grew by 340% and we're now consistently generating 40+ inbound enterprise leads per month."</blockquote>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;background:linear-gradient(135deg,#c9a84c,#856c2c);display:flex;align-items:center;justify-content:center;font-weight:700;color:#080f2e;font-size:13px;" id="testimonialAvatar">JH</div>
+            <div style="text-align:left;">
+              <div class="text-white font-semibold" id="testimonialName">James Hartwell</div>
+              <div class="text-navy-400 text-sm" id="testimonialRole">CEO, Nexus SaaS</div>
+            </div>
+          </div>
+          <div class="text-gold-500 font-mono font-bold" style="font-size:13px;" id="testimonialResult">+340% Organic Traffic</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:24px;" id="testimonialDots">
+        <div class="testimonial-dot active" onclick="setTestimonial(0)"></div>
+        <div class="testimonial-dot" onclick="setTestimonial(1)"></div>
+        <div class="testimonial-dot" onclick="setTestimonial(2)"></div>
+        <div class="testimonial-dot" onclick="setTestimonial(3)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section id="contact" style="background:#080f2e;padding:100px 0;position:relative;overflow:hidden;">
+  <div class="absolute inset-0 grid-pattern" style="opacity:0.2;"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.4),transparent);"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <div>
+        <div class="section-tag"><span style="display:inline-block;width:32px;height:1px;background:#c9a84c;"></span>Ready to Scale?</div>
+        <h2 class="font-display font-bold" style="font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.1;margin-bottom:20px;">
+          <span class="text-white">Let's Build Your</span><br><span class="gradient-text">Growth Engine.</span>
+        </h2>
+        <p class="text-navy-300 text-lg leading-relaxed mb-10">Book a free 45-minute strategy audit. We'll analyse your current marketing, identify your biggest growth opportunities, and give you a clear roadmap — no obligation, no fluff.</p>
+        <div style="margin-bottom:32px;">
+          <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;"><span style="font-size:1.5rem;margin-top:4px;">🔍</span><div><div class="font-semibold text-white mb-1">Free Marketing Audit</div><div class="text-navy-400 text-sm">A complete analysis of your current digital presence and performance gaps.</div></div></div>
+          <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;"><span style="font-size:1.5rem;margin-top:4px;">🗺️</span><div><div class="font-semibold text-white mb-1">Custom Growth Roadmap</div><div class="text-navy-400 text-sm">A prioritised action plan specific to your goals and market.</div></div></div>
+          <div style="display:flex;align-items:flex-start;gap:16px;"><span style="font-size:1.5rem;margin-top:4px;">💬</span><div><div class="font-semibold text-white mb-1">No-Pressure Strategy Call</div><div class="text-navy-400 text-sm">Talk to a real strategist, not a sales rep.</div></div></div>
+        </div>
+        <div class="card-glass" style="padding:20px;display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">⚡</div>
+          <div><div class="font-semibold text-white">Average Response Time</div><div class="text-gold-500 font-mono text-sm">Under 2 hours</div></div>
+        </div>
+      </div>
+      <div class="card-glass" style="padding:40px;" id="formContainer">
+        <div class="text-gold-500 font-mono" style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:24px;">Book Your Free Audit</div>
+        <form onsubmit="handleFormSubmit(event)">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label style="display:block;color:#7891c2;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">Full Name</label>
+              <input type="text" placeholder="James Hartwell" required class="input-field"/>
+            </div>
+            <div>
+              <label style="display:block;color:#7891c2;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">Work Email</label>
+              <input type="email" placeholder="james@company.com" required class="input-field"/>
+            </div>
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block;color:#7891c2;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">Company Name</label>
+            <input type="text" placeholder="Your Company Ltd" class="input-field"/>
+          </div>
+          <div style="margin-bottom:16px;">
+            <label style="display:block;color:#7891c2;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">Monthly Marketing Budget</label>
+            <select required class="input-field" style="appearance:none;">
+              <option value="" disabled selected style="color:#3c63a8;">Select budget range</option>
+              <option>$1,000 – $3,000</option>
+              <option>$3,000 – $10,000</option>
+              <option>$10,000 – $30,000</option>
+              <option>$30,000+</option>
+            </select>
+          </div>
+          <div style="margin-bottom:24px;">
+            <label style="display:block;color:#7891c2;font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">Your Biggest Marketing Challenge</label>
+            <textarea placeholder="Tell us about your current situation and what you'd like to achieve..." rows="4" class="input-field" style="resize:none;"></textarea>
+          </div>
+          <button type="submit" class="btn-primary shimmer-bg" style="width:100%;justify-content:center;color:#080f2e;padding:16px 28px;">
+            Claim My Free Audit
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </button>
+          <p style="text-align:center;color:#3c63a8;font-size:11px;margin-top:12px;">No spam. No obligation. Just strategy. We respect your privacy.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#080f2e;border-top:1px solid rgba(30,58,112,0.4);">
+  <!-- Newsletter -->
+  <div style="border-bottom:1px solid rgba(30,58,112,0.3);padding:44px 0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <h3 class="font-display font-bold text-white" style="font-size:1.5rem;margin-bottom:6px;">Marketing Intelligence, Weekly.</h3>
+          <p class="text-navy-400 text-sm">Actionable insights from our team, delivered every Tuesday.</p>
+        </div>
+        <div style="display:flex;gap:0;width:100%;max-width:380px;">
+          <input type="email" placeholder="your@email.com" class="input-field" style="flex:1;"/>
+          <button class="btn-primary" style="white-space:nowrap;padding:12px 20px;font-size:12px;">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main footer -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="padding-top:56px;padding-bottom:56px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;" class="grid-cols-1 md:grid-cols-4">
+      <div>
+        <a href="#" style="display:inline-flex;align-items:center;gap:14px;margin-bottom:20px;text-decoration:none;">
+        <svg width="50" height="50" viewBox="170 95 350 310" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="fng" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0d1b4b"/></linearGradient>
+            <linearGradient id="fgh" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c9a84c"/><stop offset="50%" stop-color="#f0d070"/><stop offset="100%" stop-color="#c9a84c"/></linearGradient>
+            <linearGradient id="fb1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8c040"/><stop offset="100%" stop-color="#a8893a"/></linearGradient>
+            <linearGradient id="fb2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0d070"/><stop offset="100%" stop-color="#c9a84c"/></linearGradient>
+            <filter id="fss"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0d1b4b" flood-opacity="0.2"/></filter>
+            <filter id="fgg"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#c9a84c" flood-opacity="0.4"/></filter>
+          </defs>
+          <circle cx="340" cy="230" r="195" fill="none" stroke="#1e3a8a" stroke-width="0.8" opacity="0.3"/>
+          <circle cx="340" cy="230" r="188" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.2"/>
+          <path d="M 182 390 L 182 105 L 200 105 L 200 390 Z" fill="url(#fng)" filter="url(#fss)"/>
+          <path d="M 170 105 L 212 105 L 212 118 L 170 118 Z" fill="url(#fng)"/>
+          <path d="M 170 378 L 212 378 L 212 390 L 170 390 Z" fill="url(#fng)"/>
+          <path d="M 480 390 L 480 105 L 498 105 L 498 390 Z" fill="url(#fng)" filter="url(#fss)"/>
+          <path d="M 468 105 L 510 105 L 510 118 L 468 118 Z" fill="url(#fng)"/>
+          <path d="M 468 378 L 510 378 L 510 390 L 468 390 Z" fill="url(#fng)"/>
+          <path d="M 182 105 L 200 105 L 340 272 L 480 105 L 498 105 L 340 300 Z" fill="url(#fng)"/>
+          <path d="M 332 285 L 340 300 L 348 285 L 344 285 L 340 293 L 336 285 Z" fill="#c9a84c" opacity="0.6"/>
+          <rect x="195" y="318" width="22" height="60" rx="1" fill="url(#fb1)" filter="url(#fgg)"/>
+          <rect x="232" y="295" width="22" height="83" rx="1" fill="url(#fb2)" filter="url(#fgg)"/>
+          <rect x="270" y="270" width="22" height="108" rx="1" fill="url(#fb2)" filter="url(#fgg)"/>
+          <rect x="388" y="270" width="22" height="108" rx="1" fill="url(#fb2)" filter="url(#fgg)"/>
+          <rect x="426" y="295" width="22" height="83" rx="1" fill="url(#fb2)" filter="url(#fgg)"/>
+          <rect x="463" y="318" width="22" height="60" rx="1" fill="url(#fb1)" filter="url(#fgg)"/>
+          <g filter="url(#fgg)">
+            <path d="M 192 360 L 260 300 L 310 330 L 400 240 L 470 190" fill="none" stroke="url(#fgh)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M 456 178 L 484 185 L 474 212" fill="none" stroke="#f0d070" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="470" cy="190" r="3.5" fill="#f0d070"/>
+          </g>
+          <line x1="178" y1="379" x2="503" y2="379" stroke="#c9a84c" stroke-width="1.5" opacity="0.4"/>
+        </svg>
+        <div style="line-height:1.1;">
+          <div style="font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;font-weight:700;color:#ffffff;letter-spacing:0.12em;">MATLANCER</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.32em;text-transform:uppercase;color:#c9a84c;margin-top:2px;">Marketing</div>
+        </div>
+      </a>
+        <p class="text-navy-400 text-sm leading-relaxed" style="max-width:260px;margin-bottom:20px;">Results-driven digital marketing that scales ambitious brands. Data-first. Performance-obsessed. Always accountable.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="#" style="width:36px;height:36px;border:1px solid rgba(30,58,112,0.5);display:flex;align-items:center;justify-content:center;color:#3c63a8;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.color='#c9a84c';this.style.borderColor='rgba(201,168,76,0.3)'" onmouseout="this.style.color='#3c63a8';this.style.borderColor='rgba(30,58,112,0.5)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" style="width:36px;height:36px;border:1px solid rgba(30,58,112,0.5);display:flex;align-items:center;justify-content:center;color:#3c63a8;text-decoration:none;transition:all 0.2s;" onmouseover="this.style.color='#c9a84c';this.style.borderColor='rgba(201,168,76,0.3)'" onmouseout="this.style.color='#3c63a8';this.style.borderColor='rgba(30,58,112,0.5)'">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-5" style="letter-spacing:0.05em;">Services</h4>
+        <ul style="list-style:none;">
+          <li style="margin-bottom:10px;"><a href="#features" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">SEO & Organic Growth</a></li>
+          <li style="margin-bottom:10px;"><a href="#features" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Paid Media & PPC</a></li>
+          <li style="margin-bottom:10px;"><a href="#features" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Social Media Marketing</a></li>
+          <li style="margin-bottom:10px;"><a href="#features" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Content Marketing</a></li>
+          <li style="margin-bottom:10px;"><a href="#features" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Conversion Optimisation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-5" style="letter-spacing:0.05em;">Company</h4>
+        <ul style="list-style:none;">
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">About Us</a></li>
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Case Studies</a></li>
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Blog</a></li>
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-5" style="letter-spacing:0.05em;">Legal</h4>
+        <ul style="list-style:none;">
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Privacy Policy</a></li>
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Terms of Service</a></li>
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">Cookie Policy</a></li>
+          <li style="margin-bottom:10px;"><a href="#" style="color:#3c63a8;font-size:13px;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='#3c63a8'">GDPR Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom bar -->
+  <div style="border-top:1px solid rgba(30,58,112,0.3);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="padding:20px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+      <p style="color:#2a4d8e;font-family:'JetBrains Mono',monospace;font-size:11px;">© 2025 Matlancer Marketing Ltd. All rights reserved.</p>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <span style="color:#2a4d8e;font-family:'JetBrains Mono',monospace;font-size:11px;">Reg. No. 12345678</span>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <div class="pulse-dot"></div>
+          <span style="color:#3c63a8;font-family:'JetBrains Mono',monospace;font-size:11px;">All systems operational</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:28px;right:28px;z-index:50;width:44px;height:44px;background:#c9a84c;color:#080f2e;display:none;align-items:center;justify-content:center;cursor:pointer;border:none;box-shadow:0 0 20px rgba(201,168,76,0.35);transition:all 0.3s;" onmouseover="this.style.background='#e8c040';this.style.transform='scale(1.1)'" onmouseout="this.style.background='#c9a84c';this.style.transform='scale(1)'">
+  <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
+
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar')
+  const btn = document.getElementById('scrollTop')
+  if(window.scrollY > 60){ nav.classList.add('nav-scrolled') } else { nav.classList.remove('nav-scrolled') }
+  btn.style.display = window.scrollY > 500 ? 'flex' : 'none'
+}, {passive:true})
+
+// Pricing toggle
+const prices = { growth:{monthly:1497,annual:1197}, scale:{monthly:3497,annual:2797}, dominate:{monthly:7997,annual:6397} }
+function setPricing(type){
+  const isAnn = type === 'annual'
+  document.getElementById('growthPrice').textContent = prices.growth[type].toLocaleString()
+  document.getElementById('scalePrice').textContent = prices.scale[type].toLocaleString()
+  document.getElementById('dominatePrice').textContent = prices.dominate[type].toLocaleString()
+  document.getElementById('monthlyBtn').style.cssText = isAnn ? 'padding:8px 24px;font-size:13px;font-weight:600;background:transparent;color:#7891c2;border:none;cursor:pointer;font-family:DM Sans,sans-serif;' : 'padding:8px 24px;font-size:13px;font-weight:600;background:#c9a84c;color:#080f2e;border:none;cursor:pointer;font-family:DM Sans,sans-serif;'
+  document.getElementById('annualBtn').style.cssText = isAnn ? 'padding:8px 24px;font-size:13px;font-weight:600;background:#c9a84c;color:#080f2e;border:none;cursor:pointer;font-family:DM Sans,sans-serif;display:flex;align-items:center;gap:6px;' : 'padding:8px 24px;font-size:13px;font-weight:600;background:transparent;color:#7891c2;border:none;cursor:pointer;font-family:DM Sans,sans-serif;display:flex;align-items:center;gap:6px;'
+}
+
+// Testimonials
+const testimonials = [
+  {text:`"Matlancer completely transformed our digital presence. Within 6 months, our organic traffic grew by 340% and we're now consistently generating 40+ inbound enterprise leads per month."`,name:'James Hartwell',role:'CEO, Nexus SaaS',avatar:'JH',result:'+340% Organic Traffic'},
+  {text:`"We went from spending $15K/month on ads with no ROI to generating £200K in revenue from a £20K spend in just 90 days. The precision targeting was unlike anything we'd seen."`,name:'Amara Osei',role:'Founder, Bloom Skincare',avatar:'AO',result:'10x ROAS in 90 Days'},
+  {text:`"What sets Matlancer apart is their obsession with data. Every decision is backed by numbers. Our board now sees marketing as a profit centre, not a cost centre."`,name:'David Chen',role:'Marketing Director, TechForge',avatar:'DC',result:'$2.4M Revenue Attributed'},
+  {text:`"The content strategy alone was worth ten times what we paid. Matlancer built us a content engine that continues to generate leads 18 months later with zero additional spend."`,name:'Sarah Mitchell',role:'CMO, Precision Finance',avatar:'SM',result:'1,200 Leads/Month Organically'},
+]
+let tActive = 0
+function setTestimonial(i){
+  tActive = i
+  document.getElementById('testimonialText').textContent = testimonials[i].text
+  document.getElementById('testimonialName').textContent = testimonials[i].name
+  document.getElementById('testimonialRole').textContent = testimonials[i].role
+  document.getElementById('testimonialAvatar').textContent = testimonials[i].avatar
+  document.getElementById('testimonialResult').textContent = testimonials[i].result
+  document.querySelectorAll('.testimonial-dot').forEach((d,j) => { d.classList.toggle('active', j===i) })
+}
+setInterval(() => setTestimonial((tActive+1) % testimonials.length), 5000)
+
+// Form
+function handleFormSubmit(e){
+  e.preventDefault()
+  const container = document.getElementById('formContainer')
+  container.innerHTML = `<div style="text-align:center;padding:60px 20px;">
+    <div style="font-size:4rem;margin-bottom:24px;">🎉</div>
+    <h3 class="font-display text-white font-bold" style="font-size:1.6rem;margin-bottom:12px;">You're on the list!</h3>
+    <p class="text-navy-300">We'll be in touch within 2 hours with your free audit details.</p>
+  </div>`
+}
+
+// Intersection observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)' } })
+}, {threshold:0.1})
+document.querySelectorAll('.service-card').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(24px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease'
+  observer.observe(el)
+})
+</script>
+</body>
+</html>
